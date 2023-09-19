@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+}
+
+#kinetic-holder{
+  display: flex;
+  justify-content: start;
+
+  .container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+  
+  .square {
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    position: absolute;
+  }
+  
+  .inner-square {
+    width: 70%;
+    height: 70%;
+    background-color: lightcoral;
+    position: relative;
+    top: 15%;
+    left: 15%;
+    transform: skewX(-23deg);
+  }
+}
