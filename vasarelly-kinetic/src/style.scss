@@ -32,3 +32,16 @@ body {
     transform: skewX(-23deg);
   }
 }
+
+.new-square{
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.square-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
