@@ -1,47 +1,35 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
+  height: 100vh;
+  background-color: #303030;
   box-sizing: border-box;
-}
-
-#kinetic-holder{
   display: flex;
-  justify-content: start;
-
-  .container {
-    width: 200px;
-    height: 200px;
-    position: relative;
-  }
-  
-  .square {
-    width: 100%;
-    height: 100%;
-    background-color: lightblue;
-    position: absolute;
-  }
-  
-  .inner-square {
-    width: 70%;
-    height: 70%;
-    background-color: lightcoral;
-    position: relative;
-    top: 15%;
-    left: 15%;
-    transform: skewX(-23deg);
-  }
+  justify-content: center;
+  align-items: center;
 }
 
-.new-square{
-  width: 100px;
-  height: 100px;
-  background-color: blue;
+.vasarelly-grid {
+  transform: rotate(45deg);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr); 
+  background-color: #2196F3;
+  width: 700px;
+  height: 700px;
 }
 
-.square-container{
+.v-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-v-item {
+  background-color: rgb(41, 71, 41);
+  border: 1px solid rgb(50, 161, 50);
+  width: 70%;
+  height: 70%;
 }

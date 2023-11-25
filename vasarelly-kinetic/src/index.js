@@ -1,4 +1,4 @@
 import './style.scss';
-import { renderSquareList } from "./util/render";
+import { renderCssGrid } from "./util/render";
 
-renderSquareList();
+renderCssGrid();
