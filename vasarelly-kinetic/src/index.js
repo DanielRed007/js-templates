@@ -1,4 +1,6 @@
 import './style.scss';
-import { renderCssGrid } from "./util/render";
+import GridRenderer from "./util/render";
 
-renderCssGrid();
+const renderer = new GridRenderer(["gow", "doom"]);
+
+renderer.renderCssGrid();
