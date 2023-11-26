@@ -1,12 +1,30 @@
-export const renderCssGrid = () => {
-    const gridContainer = document.querySelector(".vasarelly-grid");
+export default class GridRenderer{
 
-    for(let x = 0; x < 49; x++){
-        const square = document.createElement("div");
-        const inner = document.createElement("div");
-        square.className = "v-item";
-        inner.className = "inner-v-item";
-        square.appendChild(inner);
-        gridContainer.appendChild(square);
+    constructor(colorThemes){
+        this.colorThemes = colorThemes;
     }
-};
+
+    renderCssGrid(){
+        const gridContainer = document.querySelector(".vasarelly-grid");
+    
+        for(let x = 0; x < 49; x++){
+            const square = document.createElement("div");
+            const inner = document.createElement("div");
+            const randomShape = document.createElement("div");
+    
+            square.className = `v-item-${this.getRandomTheme(this.colorThemes)}`;
+            inner.className = `inner-v-item-${this.getRandomTheme(this.colorThemes)}`;
+            randomShape.className = `v-item-inner-circle-${this.getRandomTheme(this.colorThemes)}`;
+            
+            square.appendChild(inner);
+            inner.appendChild(randomShape);
+            gridContainer.appendChild(square);
+        }
+    };
+
+    getRandomTheme(colors = []){
+        const randomIndex = Math.floor(Math.random() * colors.length);
+    
+        return colors[randomIndex];
+    };
+}
