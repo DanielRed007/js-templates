@@ -1,3 +1,5 @@
+import UtilsFormat from "./utils-format";
+
 export default class GridRenderer{
 
     constructor(colorThemes){
@@ -23,8 +25,6 @@ export default class GridRenderer{
     };
 
     getRandomTheme(colors = []){
-        const randomIndex = Math.floor(Math.random() * colors.length);
-    
-        return colors[randomIndex];
+        return UtilsFormat.getRandomValue(colors);
     };
 }
