@@ -8,6 +8,8 @@ export default class GridRenderer{
 
     renderCssGrid(){
         const gridContainer = document.querySelector(".vasarelly-grid");
+
+        this.reloadVasarellyGrid()
     
         for(let x = 0; x < 49; x++){
             const square = document.createElement("div");
@@ -27,4 +29,12 @@ export default class GridRenderer{
     getRandomTheme(colors = []){
         return UtilsFormat.getRandomValue(colors);
     };
+
+    reloadVasarellyGrid(){
+        const btn = document.querySelector(".mini-menu");
+
+        btn.addEventListener("mouseout",(e) => {
+            UtilsFormat.refreshPage();
+        });
+    }
 }
