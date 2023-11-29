@@ -6,4 +6,8 @@ export default class UtilsFormat{
 
         return values[randomIndex];
     }
+
+    static refreshPage(){
+        location.reload();
+    }
 }
