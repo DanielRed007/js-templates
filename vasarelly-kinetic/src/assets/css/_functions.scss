@@ -1,0 +1,5 @@
+
+@function getRandomColor($colors) {
+    $randomIndex: random(length($colors));
+    @return nth($colors, $randomIndex);
+}

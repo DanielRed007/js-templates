@@ -1,11 +1,15 @@
 @import "./assets/css/mixins";
 @import "./assets/css/variables";
+@import "./assets/css/functions";
+
+$background-colors: $dark1, $gow1, $doom5;
+$randomBackground: getRandomColor($background-colors);
 
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: #303030;
+  background-color: $randomBackground;
   box-sizing: border-box;
   @include center-element();
 }
