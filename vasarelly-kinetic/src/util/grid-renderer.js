@@ -2,8 +2,9 @@ import UtilsFormat from "./utils-format";
 
 export default class GridRenderer{
 
-    constructor(colorThemes){
+    constructor(colorThemes = [], shapes = []){
         this.colorThemes = colorThemes;
+        this.shapes = shapes;
     }
 
     renderCssGrid(){
@@ -34,11 +35,14 @@ export default class GridRenderer{
         for(let elemIndex = 0; elemIndex < elemCount; elemIndex++){
             const randomTop = UtilsFormat.getRandomNumber(85);
             const randomleft= UtilsFormat.getRandomNumber(85);
+            const shapeSize = UtilsFormat.getRandomNumber(120);
             const square = document.createElement("div");
 
-            square.className = "random-square";
+            square.className = `${UtilsFormat.getRandomValue(this.shapes)}-${UtilsFormat.getRandomNumber(2)}`;
             square.style.top = `${randomTop}%`;
             square.style.left = `${randomleft}%`;
+            square.style.width = `${shapeSize}px`;
+            square.style.height = `${shapeSize}px`;
             
             gridContainer.appendChild(square);
         }
