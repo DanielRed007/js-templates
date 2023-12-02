@@ -7,6 +7,10 @@ export default class UtilsFormat{
         return values[randomIndex];
     }
 
+    static getRandomNumber(limit = 0){
+        return Math.floor(Math.random() * limit);
+    }
+
     static refreshPage(){
         location.reload();
     }

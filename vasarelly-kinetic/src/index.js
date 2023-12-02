@@ -9,7 +9,8 @@ function startGridRenderer(){
         `${UtilsFormat.getRandomValue(themes)}-2`
     ]);
 
-    renderer.renderCssGrid();
+    // renderer.renderCssGrid();
+    renderer.renderCssGridV2();
 }
 
 startGridRenderer();
