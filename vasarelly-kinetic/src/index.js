@@ -13,6 +13,8 @@ function startGridRenderer(){
 
     // renderer.renderCssGrid();
     renderer.renderCssGridV2();
+
+    // start using the basic sort algorithms to render html + css
 }
 
 startGridRenderer();
