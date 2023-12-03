@@ -30,12 +30,12 @@ export default class GridRenderer{
     renderCssGridV2(){
         const gridContainer = document.querySelector(".grid-container");
 
-        const elemCount = UtilsFormat.getRandomValue([14,21,28]);
+        const elemCount = UtilsFormat.getRandomValue([144,256,777]);
 
         for(let elemIndex = 0; elemIndex < elemCount; elemIndex++){
-            const randomTop = UtilsFormat.getRandomNumber(85);
-            const randomleft= UtilsFormat.getRandomNumber(85);
-            const shapeSize = UtilsFormat.getRandomNumber(120);
+            const randomTop = UtilsFormat.getRandomNumber(98);
+            const randomleft= UtilsFormat.getRandomNumber(98);
+            const shapeSize = UtilsFormat.getRandomNumber(40);
             const square = document.createElement("div");
 
             square.className = `${UtilsFormat.getRandomValue(this.shapes)}-${UtilsFormat.getRandomNumber(2)}`;
@@ -55,7 +55,7 @@ export default class GridRenderer{
     };
 
     reloadVasarellyGrid(){
-        const btn = document.querySelector(".mini-menu");
+        const btn = document.querySelector(".grid-1");
 
         btn.addEventListener("mouseout",(e) => {
             UtilsFormat.refreshPage();

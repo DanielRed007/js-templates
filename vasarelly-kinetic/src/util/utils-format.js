@@ -8,7 +8,7 @@ export default class UtilsFormat{
     }
 
     static getRandomNumber(limit = 0){
-        return Math.floor(Math.random() * limit);
+        return Math.floor(Math.random() * limit + 1);
     }
 
     static refreshPage(){
